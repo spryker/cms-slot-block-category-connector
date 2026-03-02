@@ -13,9 +13,6 @@ use Spryker\Client\Kernel\AbstractFactory;
 
 class CmsSlotBlockCategoryConnectorFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\CmsSlotBlockCategoryConnector\Resolver\CategoryCmsSlotBlockConditionResolverInterface
-     */
     public function createCategoryCmsSlotBlockConditionResolver(): CategoryCmsSlotBlockConditionResolverInterface
     {
         return new CategoryCmsSlotBlockConditionResolver();

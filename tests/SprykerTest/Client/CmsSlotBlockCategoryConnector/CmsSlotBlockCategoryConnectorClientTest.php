@@ -36,9 +36,6 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testIsSlotBlockConditionApplicableReturnsTrueWithCorrectData(): void
     {
         // Arrange
@@ -55,9 +52,6 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
         $this->assertTrue($isSlotBlockConditionApplicable);
     }
 
-    /**
-     * @return void
-     */
     public function testIsSlotBlockConditionApplicableReturnsFalseWithIncorrectData(): void
     {
         // Arrange
@@ -74,9 +68,6 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
         $this->assertFalse($isSlotBlockConditionApplicable);
     }
 
-    /**
-     * @return void
-     */
     public function testIsCmsBlockVisibleInSlotReturnsTrueWithAllKeyProvided(): void
     {
         // Arrange
@@ -96,9 +87,6 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
         $this->assertTrue($isCmsBlockVisibleInSlot);
     }
 
-    /**
-     * @return void
-     */
     public function testIsCmsBlockVisibleInSlotReturnsTrueWithCorrectData(): void
     {
         // Arrange
@@ -119,9 +107,6 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
         $this->assertTrue($isCmsBlockVisibleInSlot);
     }
 
-    /**
-     * @return void
-     */
     public function testIsCmsBlockVisibleInSlotReturnsFalseWithIncorrectData(): void
     {
         // Arrange
@@ -142,19 +127,11 @@ class CmsSlotBlockCategoryConnectorClientTest extends Unit
         $this->assertFalse($isCmsBlockVisibleInSlot);
     }
 
-    /**
-     * @param array $seedData
-     *
-     * @return \Generated\Shared\Transfer\CmsSlotParamsTransfer
-     */
     protected function haveCmsSlotParams(array $seedData = []): CmsSlotParamsTransfer
     {
         return (new CmsSlotParamsBuilder($seedData))->build();
     }
 
-    /**
-     * @return \Spryker\Client\CmsSlotBlockCategoryConnector\CmsSlotBlockCategoryConnectorClientInterface
-     */
     protected function getCmsSlotBlockCategoryConnectorClient(): CmsSlotBlockCategoryConnectorClientInterface
     {
         return $this->tester

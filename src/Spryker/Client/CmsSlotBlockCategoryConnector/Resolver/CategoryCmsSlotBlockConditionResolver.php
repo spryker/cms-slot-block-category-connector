@@ -13,23 +13,12 @@ use Spryker\Shared\CmsSlotBlockCategoryConnector\CmsSlotBlockCategoryConnectorCo
 
 class CategoryCmsSlotBlockConditionResolver implements CategoryCmsSlotBlockConditionResolverInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockTransfer $cmsSlotBlockTransfer
-     *
-     * @return bool
-     */
     public function isSlotBlockConditionApplicable(CmsSlotBlockTransfer $cmsSlotBlockTransfer): bool
     {
         return $cmsSlotBlockTransfer->getConditions()
             ->offsetExists(CmsSlotBlockCategoryConnectorConfig::CONDITION_KEY);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsSlotBlockTransfer $cmsSlotBlockTransfer
-     * @param \Generated\Shared\Transfer\CmsSlotParamsTransfer $cmsSlotParamsTransfer
-     *
-     * @return bool
-     */
     public function isCmsBlockVisibleInSlot(
         CmsSlotBlockTransfer $cmsSlotBlockTransfer,
         CmsSlotParamsTransfer $cmsSlotParamsTransfer
